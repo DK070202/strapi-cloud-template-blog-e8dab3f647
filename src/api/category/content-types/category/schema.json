@@ -18,14 +18,31 @@
     "slug": {
       "type": "uid"
     },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "string"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::article.article",
+      "target": "api::blog.blog",
       "mappedBy": "category"
     },
-    "description": {
-      "type": "text"
+    "publishDate": {
+      "type": "date"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "faqs.faqs",
+      "repeatable": true
     }
   }
 }
